@@ -54,7 +54,7 @@ export default function Layout() {
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
-                About
+                Home
               </Link>
 
               <Link
@@ -117,7 +117,7 @@ export default function Layout() {
                   : "text-gray-600 hover:bg-gray-50"
               }`}
             >
-              About
+              Home
             </Link>
 
             <Link
@@ -192,12 +192,12 @@ export default function Layout() {
 
               <div className="space-y-2 text-sm text-gray-600">
                 <div>
-                  <Link
-                    to="/"
-                    className="hover:text-gray-900 transition-colors"
-                  >
-                    About Department
-                  </Link>
+                    <Link
+                      to="/"
+                      className="hover:text-gray-900 transition-colors"
+                    >
+                      Home
+                    </Link>
                 </div>
 
                 <div>

@@ -1,7 +1,9 @@
 import { GraduationCap, Users, BookOpen, Award } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
-export default function AboutDepartment() {
+// The default export remains the same file but the component name is updated
+// to reflect that this is the Home page (index route).
+export default function HomeDepartment() {
   return (
     <div className="w-full">
       {/* Hero Section */}
