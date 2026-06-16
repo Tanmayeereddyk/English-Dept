@@ -4,6 +4,7 @@ import HomeDepartment from "./components/Home";
 import Faculty from "./components/Faculty";
 import Material from "./components/Material";
 import About from "./components/About";
+import Programmes from "./components/Programmes";
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +13,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, Component: HomeDepartment },
       { path: "about", Component: About },
+      { path: "programmes", Component: Programmes },
       { path: "faculty", Component: Faculty },
       { path: "material", Component: Material },
     ],

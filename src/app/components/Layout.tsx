@@ -66,6 +66,16 @@ export default function Layout() {
               >
                 About Us
               </Link>
+              <Link
+                to="/programmes"
+                className={`text-sm transition-colors ${
+                  isActive("/programmes")
+                    ? "text-gray-900 font-medium"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                Programmes
+              </Link>
 
               <Link
                 to="/faculty"
@@ -140,6 +150,17 @@ export default function Layout() {
               }`}
             >
               About Us
+            </Link>
+            <Link
+              to="/programmes"
+              onClick={() => setMenuOpen(false)}
+              className={`px-4 py-3 rounded-lg transition-colors ${
+                isActive("/programmes")
+                  ? "bg-gray-100 text-gray-900 font-medium"
+                  : "text-gray-600 hover:bg-gray-50"
+              }`}
+            >
+              Programmes
             </Link>
 
             <Link
@@ -228,6 +249,15 @@ export default function Layout() {
                     className="hover:text-gray-900 transition-colors"
                   >
                     About Us
+                  </Link>
+                </div>
+
+                <div>
+                  <Link
+                    to="/programmes"
+                    className="hover:text-gray-900 transition-colors"
+                  >
+                    Programmes
                   </Link>
                 </div>
 
