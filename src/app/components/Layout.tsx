@@ -74,16 +74,6 @@ export default function Layout() {
               >
                 About Us
               </Link>
-              <Link
-                to="/programmes"
-                className={`text-sm transition-colors ${
-                  isActive("/programmes")
-                    ? "text-gray-900 font-medium"
-                    : "text-gray-600 hover:text-gray-900"
-                }`}
-              >
-                Programmes
-              </Link>
 
               <Link
                 to="/faculty"
@@ -97,6 +87,17 @@ export default function Layout() {
               </Link>
 
               <Link
+                to="/programmes"
+                className={`text-sm transition-colors ${
+                  isActive("/programmes")
+                    ? "text-gray-900 font-medium"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                Research
+              </Link>
+
+              <Link
                 to="/material"
                 className={`text-sm transition-colors ${
                   isActive("/material")
@@ -104,18 +105,29 @@ export default function Layout() {
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
-                Resources
+                Publications
               </Link>
 
               <Link
-                to="/writing-centre"
+                to="/other-services"
                 className={`text-sm transition-colors ${
-                  isActive("/writing-centre")
+                  isActive("/other-services")
                     ? "text-gray-900 font-medium"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
-                Writing Centre
+                Other Services
+              </Link>
+
+              <Link
+                to="/contact"
+                className={`text-sm transition-colors ${
+                  isActive("/contact")
+                    ? "text-gray-900 font-medium"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                Contact
               </Link>
             </nav>
 
@@ -170,17 +182,6 @@ export default function Layout() {
             >
               About Us
             </Link>
-            <Link
-              to="/programmes"
-              onClick={() => setMenuOpen(false)}
-              className={`px-4 py-3 rounded-lg transition-colors ${
-                isActive("/programmes")
-                  ? "bg-gray-100 text-gray-900 font-medium"
-                  : "text-gray-600 hover:bg-gray-50"
-              }`}
-            >
-              Programmes
-            </Link>
 
             <Link
               to="/faculty"
@@ -195,6 +196,18 @@ export default function Layout() {
             </Link>
 
             <Link
+              to="/programmes"
+              onClick={() => setMenuOpen(false)}
+              className={`px-4 py-3 rounded-lg transition-colors ${
+                isActive("/programmes")
+                  ? "bg-gray-100 text-gray-900 font-medium"
+                  : "text-gray-600 hover:bg-gray-50"
+              }`}
+            >
+              Research
+            </Link>
+
+            <Link
               to="/material"
               onClick={() => setMenuOpen(false)}
               className={`px-4 py-3 rounded-lg transition-colors ${
@@ -203,19 +216,31 @@ export default function Layout() {
                   : "text-gray-600 hover:bg-gray-50"
               }`}
             >
-              Resources
+              Publications
             </Link>
 
             <Link
-              to="/writing-centre"
+              to="/other-services"
               onClick={() => setMenuOpen(false)}
               className={`px-4 py-3 rounded-lg transition-colors ${
-                isActive("/writing-centre")
+                isActive("/other-services")
                   ? "bg-gray-100 text-gray-900 font-medium"
                   : "text-gray-600 hover:bg-gray-50"
               }`}
             >
-              Writing Centre
+              Other Services
+            </Link>
+
+            <Link
+              to="/contact"
+              onClick={() => setMenuOpen(false)}
+              className={`px-4 py-3 rounded-lg transition-colors ${
+                isActive("/contact")
+                  ? "bg-gray-100 text-gray-900 font-medium"
+                  : "text-gray-600 hover:bg-gray-50"
+              }`}
+            >
+              Contact
             </Link>
           </nav>
         </div>
@@ -285,15 +310,6 @@ export default function Layout() {
 
                 <div>
                   <Link
-                    to="/programmes"
-                    className="hover:text-gray-900 transition-colors"
-                  >
-                    Programmes
-                  </Link>
-                </div>
-
-                <div>
-                  <Link
                     to="/faculty"
                     className="hover:text-gray-900 transition-colors"
                   >
@@ -303,19 +319,37 @@ export default function Layout() {
 
                 <div>
                   <Link
-                    to="/material"
+                    to="/programmes"
                     className="hover:text-gray-900 transition-colors"
                   >
-                    Course Materials
+                    Research
                   </Link>
                 </div>
 
                 <div>
                   <Link
-                    to="/writing-centre"
+                    to="/material"
                     className="hover:text-gray-900 transition-colors"
                   >
-                    Writing Centre
+                    Publications
+                  </Link>
+                </div>
+
+                <div>
+                  <Link
+                    to="/other-services"
+                    className="hover:text-gray-900 transition-colors"
+                  >
+                    Other Services
+                  </Link>
+                </div>
+
+                <div>
+                  <Link
+                    to="/contact"
+                    className="hover:text-gray-900 transition-colors"
+                  >
+                    Contact
                   </Link>
                 </div>
               </div>

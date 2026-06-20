@@ -6,6 +6,7 @@ import Material from "./components/Material";
 import About from "./components/About";
 import Programmes from "./components/Programmes";
 import WritingCentre from "./components/WritingCentre";
+import OtherServices from "./components/OtherServices";
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
       { path: "faculty", Component: Faculty },
       { path: "material", Component: Material },
       { path: "writing-centre", Component: WritingCentre },
+      { path: "other-services", Component: OtherServices },
     ],
   },
 ]);
