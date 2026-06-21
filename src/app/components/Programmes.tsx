@@ -6,7 +6,7 @@ export default function Programmes() {
       {/* Hero */}
       <section className="bg-gray-50 py-16 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl text-gray-900 mb-2">Programmes</h1>
+          <h1 className="text-4xl text-gray-900 mb-2">Programmes Offered</h1>
           <p className="text-lg text-gray-600 mb-6 italic">Doctoral Research, Language Education, and Academic Communication</p>
 
           <p className="text-gray-700 max-w-3xl">

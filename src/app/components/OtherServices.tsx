@@ -175,15 +175,7 @@ export default function OtherServices() {
               <p className="text-gray-600 mt-3">The Stream of English offers customised training programmes for corporate organisations, educational institutions, government bodies, and other professional settings. Programmes are delivered by experienced faculty with expertise in communication, academic writing, English for specific purposes, and language pedagogy.</p>
             </div>
 
-            <div className="flex-shrink-0">
-              <div className="bg-amber-100 border border-amber-200 rounded-lg p-4">
-                <h3 className="text-lg font-medium">Need a one-day workshop or a multi-week training programme?</h3>
-                <p className="text-gray-700">We can design customised solutions tailored to your organisational goals.</p>
-                <div className="mt-4">
-                  <Button variant="default" onClick={() => formRef.current?.scrollIntoView({ behavior: "smooth" })}>Request Training</Button>
-                </div>
-              </div>
-            </div>
+            {/* Training CTA card removed */}
           </div>
         </section>
 

@@ -261,7 +261,16 @@ export default function TrainingRequestForm({ onClose, onSuccess }: Props) {
 
               <div>
                 <label className="text-sm font-medium text-gray-700">Attach a Brief (optional)</label>
-                <input ref={fileInputRef} type="file" accept=".pdf,.doc,.docx" onChange={(e) => setForm({ ...form, file: e.target.files ? e.target.files[0] : null })} />
+                <label className="inline-flex items-center gap-2 text-amber-600 hover:underline cursor-pointer mt-2">
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept=".pdf,.doc,.docx"
+                    className="hidden"
+                    onChange={(e) => setForm({ ...form, file: e.target.files ? e.target.files[0] : null })}
+                  />
+                  <span className="font-medium">Choose file</span>
+                </label>
                 {form.file && <p className="text-sm text-gray-600 mt-1">Selected: {form.file.name}</p>}
               </div>
             </div>

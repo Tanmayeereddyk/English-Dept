@@ -55,19 +55,10 @@ export default function Layout() {
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
-                Home
-              </Link>
-
-              <Link
-                to="/about"
-                className={`text-sm transition-colors ${
-                  isActive("/about")
-                    ? "text-gray-900 font-medium"
-                    : "text-gray-600 hover:text-gray-900"
-                }`}
-              >
                 About Us
               </Link>
+
+            {/* Removed separate About link - root now serves as About Us */}
 
               <Link
                 to="/faculty"
@@ -80,26 +71,37 @@ export default function Layout() {
                 Faculty & Scholars
               </Link>
 
-              <Link
-                to="/programmes"
-                className={`text-sm transition-colors ${
-                  isActive("/programmes")
-                    ? "text-gray-900 font-medium"
-                    : "text-gray-600 hover:text-gray-900"
-                }`}
-              >
-                Research
-              </Link>
+               <Link
+                 to="/programmes"
+                 className={`text-sm transition-colors ${
+                   isActive("/programmes")
+                     ? "text-gray-900 font-medium"
+                     : "text-gray-600 hover:text-gray-900"
+                 }`}
+               >
+                 Programmes
+               </Link>
+
+               <Link
+                 to="/material"
+                 className={`text-sm transition-colors ${
+                   isActive("/material")
+                     ? "text-gray-900 font-medium"
+                     : "text-gray-600 hover:text-gray-900"
+                 }`}
+               >
+                 Resources
+               </Link>
 
               <Link
-                to="/material"
+                to="/writing-centre"
                 className={`text-sm transition-colors ${
-                  isActive("/material")
+                  isActive("/writing-centre")
                     ? "text-gray-900 font-medium"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
-                Publications
+                Writing Centre
               </Link>
 
               <Link
@@ -153,20 +155,10 @@ export default function Layout() {
                   : "text-gray-600 hover:bg-gray-50"
               }`}
             >
-              Home
-            </Link>
-
-            <Link
-              to="/about"
-              onClick={() => setMenuOpen(false)}
-              className={`px-4 py-3 rounded-lg transition-colors ${
-                isActive("/about")
-                  ? "bg-gray-100 text-gray-900 font-medium"
-                  : "text-gray-600 hover:bg-gray-50"
-              }`}
-            >
               About Us
             </Link>
+
+            {/* Removed separate About link - root now serves as About Us */}
 
             <Link
               to="/faculty"
@@ -189,7 +181,7 @@ export default function Layout() {
                   : "text-gray-600 hover:bg-gray-50"
               }`}
             >
-              Research
+              Programme
             </Link>
 
             <Link
@@ -201,7 +193,19 @@ export default function Layout() {
                   : "text-gray-600 hover:bg-gray-50"
               }`}
             >
-              Publications
+              Resources
+            </Link>
+
+            <Link
+              to="/writing-centre"
+              onClick={() => setMenuOpen(false)}
+              className={`px-4 py-3 rounded-lg transition-colors ${
+                isActive("/writing-centre")
+                  ? "bg-gray-100 text-gray-900 font-medium"
+                  : "text-gray-600 hover:bg-gray-50"
+              }`}
+            >
+              Writing Centre
             </Link>
 
             <Link
