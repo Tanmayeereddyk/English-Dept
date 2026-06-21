@@ -1,12 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, Outlet, useLocation } from "react-router";
-import {
-  BookOpen,
-  Mail,
-  MapPin,
-  Phone,
-  Menu,
-} from "lucide-react";
+import { BookOpen, Menu, MapPin } from "lucide-react";
 
 export default function Layout() {
   const location = useLocation();
@@ -119,16 +113,7 @@ export default function Layout() {
                 Other Services
               </Link>
 
-              <Link
-                to="/contact"
-                className={`text-sm transition-colors ${
-                  isActive("/contact")
-                    ? "text-gray-900 font-medium"
-                    : "text-gray-600 hover:text-gray-900"
-                }`}
-              >
-                Contact
-              </Link>
+              {/* Contact page removed */}
             </nav>
 
             {/* Mobile Hamburger Button */}
@@ -231,17 +216,7 @@ export default function Layout() {
               Other Services
             </Link>
 
-            <Link
-              to="/contact"
-              onClick={() => setMenuOpen(false)}
-              className={`px-4 py-3 rounded-lg transition-colors ${
-                isActive("/contact")
-                  ? "bg-gray-100 text-gray-900 font-medium"
-                  : "text-gray-600 hover:bg-gray-50"
-              }`}
-            >
-              Contact
-            </Link>
+            {/* Contact page removed */}
           </nav>
         </div>
       </header>
@@ -254,124 +229,71 @@ export default function Layout() {
       {/* Footer */}
       <footer className="bg-gray-50 border-t border-gray-200 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-sm font-medium text-gray-900 mb-4">
-                Contact Information
-              </h3>
+          <div className="flex flex-col md:flex-row md:items-start md:gap-8">
+            {/* Left Section (approx 40%) */}
+            <div className="md:w-2/5">
+              <h3 className="text-sm font-medium text-gray-900 mb-4">Get in Touch</h3>
 
-              <div className="space-y-3 text-sm text-gray-600">
+              <address className="not-italic text-sm text-gray-600 space-y-3">
                 <div className="flex items-start gap-2">
                   <MapPin className="size-4 mt-0.5 flex-shrink-0" />
-                  <span>
-                    Department of English
-                    <br />
-                    University Building, Room 301
-                    <br />
-                    123 University Avenue
-                  </span>
+                  <div>
+                    <p>Stream of English Department of Sciences and Humanities</p>
+                    <p>Indian Institute of Information Technology, Design and Manufacturing, Kancheepuram</p>
+                    <p>Melakkottaiyur, Off Vandalur–Kelambakkam Road</p>
+                    <p>Chennai – 600 127, Tamil Nadu, India</p>
+                  </div>
                 </div>
 
-                <div className="flex items-center gap-2">
-                  <Phone className="size-4 flex-shrink-0" />
-                  <span>(555) 123-4567</span>
+                <div className="text-sm text-gray-600">
+                  <p>Phone: +91-44-2747 6300 (Institute Main Line)</p>
+                  <p>
+                    Institute Website: <a className="text-blue-600 hover:underline" href="https://www.iiitdm.ac.in" target="_blank" rel="noreferrer">www.iiitdm.ac.in</a>
+                  </p>
                 </div>
-
-                <div className="flex items-center gap-2">
-                  <Mail className="size-4 flex-shrink-0" />
-                  <span>english@university.edu</span>
-                </div>
-              </div>
+              </address>
             </div>
 
-            <div>
-              <h3 className="text-sm font-medium text-gray-900 mb-4">
-                Quick Links
-              </h3>
+            {/* Right Section (approx 60%) */}
+            <div className="md:w-3/5 space-y-6">
+              <div>
+                <h3 className="text-sm font-medium text-gray-900 mb-4">Contact Details</h3>
 
-              <div className="space-y-2 text-sm text-gray-600">
-                <div>
-                    <Link
-                      to="/"
-                      className="hover:text-gray-900 transition-colors"
-                    >
-                      Home
-                    </Link>
-                </div>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full text-sm text-gray-600 table-auto">
+                    <thead>
+                      <tr className="text-left">
+                        <th className="pb-2 pr-6">Purpose</th>
+                        <th className="pb-2">Email</th>
+                      </tr>
+                    </thead>
+                    <tbody className="align-top">
+                      <tr>
+                        <td className="py-2 pr-6">General Enquiries</td>
+                        <td className="py-2 break-words"><a href="mailto:english.sh@iiitdm.ac.in" className="hover:text-gray-900 transition-colors">english.sh@iiitdm.ac.in</a></td>
+                      </tr>
 
-                <div>
-                  <Link
-                    to="/about"
-                    className="hover:text-gray-900 transition-colors"
-                  >
-                    About Us
-                  </Link>
-                </div>
+                      <tr>
+                        <td className="py-2 pr-6">Writing Centre</td>
+                        <td className="py-2 break-words"><a href="mailto:writingcentre@iiitdm.ac.in" className="hover:text-gray-900 transition-colors">writingcentre@iiitdm.ac.in</a></td>
+                      </tr>
 
-                <div>
-                  <Link
-                    to="/faculty"
-                    className="hover:text-gray-900 transition-colors"
-                  >
-                    Faculty Directory
-                  </Link>
-                </div>
+                      <tr>
+                        <td className="py-2 pr-6">PhD Admissions</td>
+                        <td className="py-2 break-words"><a href="mailto:phd.admissions@iiitdm.ac.in" className="hover:text-gray-900 transition-colors">phd.admissions@iiitdm.ac.in</a></td>
+                      </tr>
 
-                <div>
-                  <Link
-                    to="/programmes"
-                    className="hover:text-gray-900 transition-colors"
-                  >
-                    Research
-                  </Link>
-                </div>
-
-                <div>
-                  <Link
-                    to="/material"
-                    className="hover:text-gray-900 transition-colors"
-                  >
-                    Publications
-                  </Link>
-                </div>
-
-                <div>
-                  <Link
-                    to="/other-services"
-                    className="hover:text-gray-900 transition-colors"
-                  >
-                    Other Services
-                  </Link>
-                </div>
-
-                <div>
-                  <Link
-                    to="/contact"
-                    className="hover:text-gray-900 transition-colors"
-                  >
-                    Contact
-                  </Link>
+                      <tr>
+                        <td className="py-2 pr-6">Corporate and Professional Training</td>
+                        <td className="py-2 break-words"><a href="mailto:training.english@iiitdm.ac.in" className="hover:text-gray-900 transition-colors">training.english@iiitdm.ac.in</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
+
+              {/* How to Reach Us section removed */}
             </div>
-
-            <div>
-              <h3 className="text-sm font-medium text-gray-900 mb-4">
-                Office Hours
-              </h3>
-
-              <div className="text-sm text-gray-600 space-y-1">
-                <p>Monday - Friday</p>
-                <p>9:00 AM - 5:00 PM</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-gray-200 text-center text-sm text-gray-500">
-            <p>
-              &copy; {new Date().getFullYear()} Department of English. All
-              rights reserved.
-            </p>
           </div>
         </div>
       </footer>
